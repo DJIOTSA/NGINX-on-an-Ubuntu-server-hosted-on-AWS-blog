@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuring NGINX on AWS: A DevOps Case Study</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2rem;
+        }
+        header a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        header a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .call-to-action {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-left: 5px solid #007BFF;
+        }
+        .call-to-action h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Configuring NGINX on AWS: A DevOps Case Study</h1>
+        <p>By DJIOTSA DJOUAKE CHRISTIAN DARYN | <a href="https://www.linkedin.com/in/djiotsa-djouake-christian-daryn-36470a253" target="_blank">LinkedIn Profile</a></p>
+    </header>
+    <div class="container">
+        <h2>Abstract</h2>
+        <p>
+            This case study documents the process of configuring an NGINX web server on an Ubuntu instance hosted on AWS. The objective was to deploy a functional web server capable of serving a custom HTML page. The exercise highlights key DevOps practices, including infrastructure provisioning, server configuration, and deployment automation.
+        </p>
+
+        <h2>Methodology</h2>
+        <p>
+            The task was executed in the following phases:
+        </p>
+        <ol>
+            <li><strong>Infrastructure Provisioning:</strong> An Ubuntu 22.04 LTS instance was launched on AWS EC2. The security group was configured to allow HTTP (port 80) and SSH (port 22) traffic.</li>
+            <li><strong>Server Configuration:</strong> The instance was accessed via SSH using a private key (.pem file). NGINX was installed using the <code>apt</code> package manager, and the service was started and enabled for automatic startup on boot.</li>
+            <li><strong>Custom HTML Deployment:</strong> The default NGINX HTML file (<code>/var/www/html/index.html</code>) was replaced with a custom page displaying the message: "Welcome to DevOps Stage 0 - [Your Name]/[SlackName]".</li>
+            <li><strong>Validation:</strong> The web server was tested by accessing the instance’s public IP address in a browser. The custom HTML page was successfully served, confirming the configuration’s correctness.</li>
+        </ol>
+
+        <h2>Challenges and Solutions</h2>
+        <p>
+            Several challenges were encountered during the process:
+        </p>
+        <ul>
+            <li><strong>AWS EC2 Configuration:</strong> Initial unfamiliarity with AWS EC2 was addressed by referencing the official AWS documentation and tutorials.</li>
+            <li><strong>SSH Connectivity:</strong> Permission issues with the private key were resolved by setting the correct file permissions using <code>chmod 400 &lt;key-file&gt;.pem</code>.</li>
+            <li><strong>NGINX File Placement:</strong> Uncertainty about the default HTML file location was resolved by consulting the NGINX documentation, which indicated <code>/var/www/html/index.html</code> as the default path.</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>
+            This exercise demonstrated the foundational skills required for DevOps, including cloud infrastructure management, server configuration, and deployment automation. The successful deployment of a custom HTML page using NGINX on AWS EC2 underscores the importance of understanding both theoretical concepts and practical implementation in DevOps.
+        </p>
+        <p>
+            Future work will focus on advanced topics such as infrastructure as code (IaC) using Terraform, continuous integration/continuous deployment (CI/CD) pipelines, and containerization with Docker and Kubernetes.
+        </p>
+
+        <div class="call-to-action">
+            <h3>Looking for DevOps Engineers?</h3>
+            <p>
+                If you're seeking skilled DevOps engineers to optimize your infrastructure, automate deployments, or streamline your CI/CD pipelines, <a href="https://hng.tech/hire/cloud-engineers" target="_blank" >we can help</a>. Our team specializes in delivering scalable, efficient, and secure DevOps solutions tailored to your business needs. <a href="https://hng.tech/hire/devops-engineers" target="_blank">Contact us today</a> to learn more.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
